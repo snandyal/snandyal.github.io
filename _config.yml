@@ -1,3 +1,4 @@
+
 # Welcome to Jekyll!
 #
 # This config file is meant for settings that affect your whole blog, values
@@ -14,19 +15,18 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: Help POC
+timezone: UTC
+collections:
+  help:
+    title: Help
+    output: true
+    permalink: "/:title/"
 email: 
 description: 
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
-collections:
-   help:
-     output: true
-     permalink: /:title/
-# Build settings
-#markdown: kramdown
-#theme: minima
+baseurl: ''
+url: ''
 gems:
-  - jekyll-feed
+- jekyll-feed
 exclude:
-  - Gemfile
-  - Gemfile.lock
+- Gemfile
+- Gemfile.lock

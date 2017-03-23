@@ -1,7 +1,7 @@
 ---
-layout: help
 title: Registering Online
-permalink: /help/gettingstarted/register/
+permalink: "/help/gettingstarted/register/"
+layout: help
 ---
 
 Once you’ve completed your online Registration, you can signin and start using the website.

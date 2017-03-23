@@ -1,5 +1,6 @@
 ---
-layout: help
 title: MBP Help
-permalink: /help/index/
+permalink: "/help/index/"
+layout: help
 ---
+

@@ -1,7 +1,7 @@
 ---
-layout: help
 title: Help
-permalink: /help/index/
+permalink: "/help/index/"
+layout: help
 ---
 
 Help Page provides you with a video demonstration of how the registration process works.
