@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<!--[if IE 9]><html class="no-js ie9" lang="en-US"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html lang="en-US" class="no-js not-ie">
+<!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <title>{{ page.title }}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=yes">
+        <meta name="description" content="">
+        <meta name="keywords" content="">
+        <meta name="viewport" content="width=device-width">
+    </head>
+    <body>
+    <div class="wrapper">
+        <header role="banner">
+        </header>
+         <nav class="main-nav">
+          <ul>
+            {% assign navigation_pages = site.html_pages | sort: 'navigation_weight' %}
+            {% for p in navigation_pages %}
+              {% if p.navigation_weight %}
+                <li>
+                  <a href="{{ p.url }}" {% if p.url == page.url %}class="active"{% endif %}>
+                    {{ p.title }}
+                  </a>
+                </li>
+              {% endif %}
+            {% endfor %}
+          </ul>
+        </nav>
+        <!-- end header-->
+        <!-- begin Main -->
+        <main id="main-content" role="main">
+          {{ content }}
+        </main>
+        <!-- end Main-->
+        <button class="back-to-top-btn" id="BackToTopButton" title="Select to go to the top of this page.">Back To Top</button>
+        <!-- begin footer-->
+        <footer role="contentinfo">
+        </footer>
+        <!-- end footer -->
+    </div>
+    <div class="device-xs visible-xs"></div>
+    <div class="device-sm visible-sm"></div>
+    <div class="device-md visible-md"></div>
+    <div class="device-lg visible-lg"></div>
+  </body>
+</html>

@@ -1,0 +1,204 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+#left-navs {
+    li {
+        border-top: 1px dotted #000;
+        margin: 0;
+        position: relative;
+        &:first-child {
+            border-top: 0;
+        }
+        a {
+            color: $brand-navbar-top;
+            display: block;
+            @include font-size-REM($font-size-small);
+            font-weight: 700;
+            padding: 10px 15px;
+        }
+    }
+    %item-focus {
+        background: $navyblue-darker;
+        @include background($brand-primary, $navyblue-darker);
+        color: $brand-white;
+        text-decoration: underline;
+    }
+    %yellow-focus {
+        background: $yellow-darker;
+        @include background($yellow-lighter, $yellow-darker);
+        text-decoration: none;
+        color: $brand-navbar-top;
+    }
+    .first-level > li {
+        border-top: 1px solid $navyblue;
+        &:first-child {
+            border-top: none;
+        }
+        &:last-child {
+            border-bottom: none;
+        }
+        > a {
+            background: $brand-info;
+            color: $brand-navbar-top;
+            @include font-size-REM(14);
+            &:hover, &:focus {
+                background: $navyblue-darker;
+                color: $brand-white;
+                text-decoration: none;
+                @extend %item-focus;
+            }
+            &:focus {
+                outline-offset: -1px;
+            }
+        }
+        &.active {
+            > a {
+                background: $navyblue-darker;
+                color: $brand-white;
+                @include font-size-REM(16);
+                height: 58px;
+                padding: 8px 15px;
+                &:after {
+                    border: solid transparent;
+                    border-color: rgba(136, 183, 213, 0);
+                    border-left-color: $navyblue-darker;
+                    border-width: 29px;
+                    content: " ";
+                    display: block;
+                    left: 100%;
+                    margin-top: 0px;
+                    margin-left: -1px;
+                    position: absolute;
+                    pointer-events: none;
+                    top: 0;
+                }
+            }
+        }
+    }
+    .second-level > li,
+    .third-level > li {
+        > a {
+            background: $gray-lighter;
+            padding-left: 30px;
+            &:hover, &:focus {
+                background: $navyblue-darker;
+                color: $brand-white;
+                @extend %item-focus;
+            }
+            &:focus {
+                outline-offset: -1px;
+            }
+        }
+        &.active {
+            > a {
+                background: $yellow-darker;
+                @include background($yellow-lighter, $yellow-darker);
+                position: relative;
+                &:hover,
+                &:focus {
+                    text-decoration: none;
+                    color: $brand-navbar-top;
+                }
+                &:before {
+                    @extend %left-arrow;
+                }
+            }
+            &:before {
+                color: $brand-navbar-top;
+                content: "\f101";
+                display: inline-block;
+                font: normal normal 20px 'FontAwesome';
+                font: normal normal 2.2rem 'FontAwesome';
+                left: 11px;
+                position: absolute;
+                text-decoration: inherit;
+                top: 6px;
+                z-index: 1;
+            }
+        }
+    }
+    .third-level > li {
+        > a {
+            padding-left: 40px;
+        }
+        &.active {
+            > a {
+                background: $yellow-darker;
+                @include background($yellow-lighter, $yellow-darker);
+                &:hover,
+                &:focus {
+                    text-decoration: none;
+                    color: $brand-navbar-top;
+                }
+                &:before {
+                    left: 25px;
+                }
+            }
+            &:before {
+                color: $brand-navbar-top;
+                content: "\f101";
+                display: inline-block;
+                font: normal normal 19px 'FontAwesome';
+                font: normal normal 2rem 'FontAwesome';
+                left: 16px;
+                position: absolute;
+                text-decoration: inherit;
+                top: 6px;
+                z-index: 1;
+            }
+        }
+    }
+    .fourth-level > li {
+        > a {
+            background: $panel-bg-color;
+            padding-left: 50px;
+            &:hover,
+            &:focus {
+                background: $navyblue-darker;
+                color: $brand-white;
+                @extend %yellow-focus;
+            }
+            &:focus {
+                outline-offset: -1px;
+            }
+        }
+        &.active {
+            > a {
+                background: $yellow-darker;
+                padding: 15px 15px 15px 50px;
+                position: relative;
+                @extend %yellow-focus;
+                &:before {
+                    @extend %left-arrow;
+                    left: 35px;
+                }
+                &:hover,
+                &:focus {
+                    background: $yellow-darker;
+                    color: $brand-navbar-top;
+                    @extend %yellow-focus;
+                }
+            }
+            &:before {
+                color: $brand-navbar-top;
+                content: "\f101";
+                display: inline-block;
+                font: normal normal 18px 'FontAwesome';
+                font: normal normal 1.8rem 'FontAwesome';
+                left: 25px;
+                position: absolute;
+                text-decoration: inherit;
+                top: 13px;
+                z-index: 1;
+            }
+        }
+    }
+    // Hide all submenus when not active
+    .first-level ul {
+        display: none;
+    }
+    // Show the direct submenu when active
+    .active > ul {
+        display: block;
+    }
+}
