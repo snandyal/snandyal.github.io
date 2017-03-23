@@ -1,9 +1,9 @@
-- text: MBP Help
+- text: Help
   url: /help/index/
 - text: Getting started
   url: /help/gettingstarted/
   subitems:
     - text: Registering online
       url: /help/gettingstarted/register/
-    - text: RRB benefits
+    - text: Benefits
       url: /help/gettingstarted/rrb_benifits/
