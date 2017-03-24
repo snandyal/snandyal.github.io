@@ -6,6 +6,9 @@ collections:
     title: Help
     output: true
     permalink: "/:title/"
+  homehealthhelp:
+    title: HomeHealthHelp
+    output: true
   posts:
     title: Posts
     output: true
