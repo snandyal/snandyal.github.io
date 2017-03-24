@@ -1,5 +1,5 @@
 ---
-title: virtualtour
+title: Virtual Tour
 date: 2017-03-24 14:51:00 Z
 ---
 
