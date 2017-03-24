@@ -3,6 +3,7 @@ title: Help
 permalink: "/help/index/"
 layout: help
 ---
+
 <div>
 <p>Help Page provides you with a video demonstration of how the registration process works.</p>
 
