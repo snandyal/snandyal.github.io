@@ -10,26 +10,48 @@
         <meta name="description" content="">
         <meta name="keywords" content="">
         <meta name="viewport" content="width=device-width">
-        <link rel="stylesheet" href="/assets/css/style.css">
+        <link href='https://assets.cms.gov/Resources/Global/css/508Assets.css' rel="stylesheet" type="text/css"/>
+        <link href='https://assets.cms.gov/resources/medicare/css/medicareglobal.css' rel="stylesheet" type="text/css"/>
+        <link href='https://assets.cms.gov/resources/medicare/css/template-1.1.css' rel="stylesheet" type="text/css"/>
+        <link  href='https://assets.cms.gov/resources/medicare/css/template-responsive-1.1.css' rel="stylesheet" type="text/css"/>
+        <link  href='https://assets.cms.gov/resources/global/css/default.css' rel="stylesheet" type="text/css"/>
+        <link  href='https://assets.cms.gov/resources/Medicare/css/MedicareHeaderFooter.css' rel="stylesheet" type="text/css"/>
+        <link href='https://assets.cms.gov/Resources/Global/css/lib/bootstrap.css' rel="stylesheet" type="text/css"/>
+
     </head>
-    <body>
-    <div class="wrapper">
-        <header role="banner">
-        </header>
-         
-        {% include nav.html nav=site.data.helpmenu %}
-        <!-- end header-->
-        <!-- begin Main -->
-        <main id="main-content" role="main">
-          <h1>{{ page.title }}</h1>
-          {{ content }}
-        </main>
-        <!-- end Main-->
-        <button class="back-to-top-btn" id="BackToTopButton" title="Select to go to the top of this page.">Back To Top</button>
-        <!-- begin footer-->
-        <footer role="contentinfo">
-        </footer>
-        <!-- end footer -->
+    <body class="MAC smallFont">
+    <div id="page" class="staticpage">
+        <div id="pagecontent" class="container-fluid">
+            <header id="header" role="banner" class="cobrand row">
+                {% include header.html  %}
+            </header>
+            <!-- begin Main -->
+            <div class="wrapper">
+                <div id="main-content" role="main">
+                    <div class="section"> <div class="row-fluid">
+                        <div id="_staticNav" class="span3" role="navigation">
+                            <div id="staticLeftNavContainer">
+                                {% include nav.html nav=site.data.helpmenu %}
+                            </div>
+                        </div>
+                        <div class="span9">
+                            <div class="syndicate">
+                                <section id="content-column" class="content">
+                                    <h1 id="main_content" tabindex="-1" role="heading" aria-level="1">{{ page.title }}</h1>
+                                </section>
+                                {{ content }}
+                            </div>
+                        </div>
+                    </div></div>
+                </div>
+            </div>
+            <!-- end Main-->
+            <button class="back-to-top-btn" id="BackToTopButton" title="Select to go to the top of this page.">Back To Top</button>
+            <!-- begin footer-->
+            <footer role="contentinfo">
+            </footer>
+            <!-- end footer -->
+        </div>
     </div>
     <div class="device-xs visible-xs"></div>
     <div class="device-sm visible-sm"></div>

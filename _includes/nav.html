@@ -1,19 +1,17 @@
-<nav id="left-navs" role="navigation">
-	{% assign navurl = page.url | remove: 'index.html' %}
-	<ul class="first-level list-unstyled">
+<div id="left-navs">
+	{% assign navurl = page.url | remove: 'index.html' | parent = '' %}
+	<ul class="sub-nav">
 	{% for item in include.nav %}
-		<li>
-			<a href="{{ item.url }}">
-				{% if item.url == navurl %}
-					<b>{{ item.text }}</b>
-				{% else %}
+		{% if item.weight == 1 %} {% assign parent =  item.url %}{% endif %}
+		{% if item.weight == 1 or 
+		   item.url contains navurl or 
+		   navurl contains parent %}
+		<li class="sub-nav-item {% if item.url == navurl %} selected {% endif %}">
+			<a class="sub-nav-link" href="{{ item.url }}">
 					{{ item.text }}
-				{% endif %}
 			</a>
 		</li>
-		{% if item.subitems and navurl contains item.url %}
-			{% include nav.html nav=item.subitems %}
 		{% endif %}
 	{% endfor %}
 	</ul>
-</nav>
+</div>

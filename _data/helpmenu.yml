@@ -1,9 +1,51 @@
 - text: Help
   url: /help/index/
+  weight: 1
 - text: Getting started
   url: /help/gettingstarted/
-  subitems:
-    - text: Registering online
-      url: /help/gettingstarted/register/
-    - text: Benefits
-      url: /help/gettingstarted/rrb_benifits/
+  weight: 1
+- text: Registering online
+  url: /help/gettingstarted/register/
+  weight: 2
+- text: Benefits
+  url: /help/gettingstarted/rrb_benifits/
+  weight: 2
+- text: Signing in for the first time
+  url: /help/gettingstarted/firsttime/
+  weight: 2
+- text: Account services
+  url: /help/accountservices/
+  weight: 1
+- text: Forgot my username/password/both
+  url: /help/accountservices/forgot/
+  weight: 2
+- text: My account is locked
+  url: /help/accountservices/account_locked/
+  weight: 2
+- text: Not getting email from Medicare
+  url: /help/accountservices/notreceivingmail/
+  weight: 2
+- text: Permanently deactivating my account
+  url: /help/accountservices/deactivate/
+  weight: 2
+- text: Website timing out
+  url: /help/accountservices/timingout
+  weight: 2
+- text: Customer service
+  url: /help/customerservice/
+  weight: 1
+- text: Security and Privacy
+  url: /help/securityprivacy/
+  weight: 1
+- text: Privacy policy
+  url: /help/accountservices/deactivate/
+  weight: 2
+- text: Secure sign in
+  url: /help/accountservices/timing_out
+  weight: 2
+- text: Optional and free
+  url: /help/accountservices/timing_out
+  weight: 2
+- text: Virtual tour
+  url: /help/virtualtour/
+  weight: 1
